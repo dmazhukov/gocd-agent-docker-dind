@@ -60,6 +60,7 @@ RUN \
 # ensure that logs are printed to console output
 COPY agent-bootstrapper-logback-include.xml agent-launcher-logback-include.xml agent-logback-include.xml /go-agent/config/
 
+COPY daemon.json /etc/docker/daemon.json 
 ADD docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
